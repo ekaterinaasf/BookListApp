@@ -20,7 +20,7 @@ This project is created to store books in a convenient way with theirs titles, a
 
 ## Styling
 
-In tis project is used pre-defined set of styles loaded from [here]("https://bootswatch.com/4/yeti/bootstrat.min.css")
+In tis project is used pre-defined set of styles loaded from [here](https://bootswatch.com/4/yeti/bootstrat.min.css)
 
 ## Listeners
 
