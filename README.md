@@ -24,14 +24,15 @@ In tis project is used pre-defined set of styles loaded from [here]("https://boo
 
 ## Listeners
 
-| type              | attached to         | callback       |
-| ----------------- | ------------------- | -------------- |
-| `'click'`         | every `id=".panel"` | `toggleOpen`   |
-| `'transitionend'` | every `id=".panel"` | `toggleActive` |
+| type                 | attached to    | callback                                                                              |
+| -------------------- | -------------- | ------------------------------------------------------------------------------------- |
+| `'click'`            | `"#book-list"` | `UI.deleteBook, Store.removeBook, UI.showAlert`                                       |
+| `"submit"`           | `"#book-form"` | `event.preventDefault, UI.showAlert, UI.addBookToList, Store.addBook, UI.clearFields` |
+| `"DOMContentLoaded"` | `document`     | `UI.displayBooks`                                                                     |
 
 ## Handlers
 
-| syntax           | parameters | return value | behavior                                                               |
-| ---------------- | ---------- | ------------ | ---------------------------------------------------------------------- |
-| `toggleOpen()`   | no         | no           | apply an appropriate style                                             |
-| `toggleActive()` | _Event_    | no           | apply an appropriate style for the block related to the selected event |
+| syntax        | parameters                                                        | return value | behavior                     |
+| ------------- | ----------------------------------------------------------------- | ------------ | ---------------------------- |
+| `class UI`    | `displayBooks, addBookToList, deleteBook, showAlert, clearFields` | no           | class to handle UI           |
+| `class Store` | `getBooks, addBook, removeBook`                                   | no           | class to handle book storage |
